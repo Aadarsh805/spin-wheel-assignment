@@ -6,7 +6,6 @@ import Wheel from "./assets/wheel.png";
 import Coupon from "./components/Coupon";
 
 function App() {
-  const onSpin = () => {};
   const [isLoading, setIsLoading] = useState(false);
   const [isAllowed, setIsAllowed] = useState(false);
   const [won, setWon] = useState(false);
@@ -31,12 +30,7 @@ function App() {
               />
             </div>
           ) : (
-            <Spinwheel
-              setWon={setWon}
-              onSpin={onSpin}
-              won={won}
-              setPrize={setPrize}
-            />
+            <Spinwheel setWon={setWon} won={won} setPrize={setPrize} />
           )}
           {!isAllowed ? (
             <Form

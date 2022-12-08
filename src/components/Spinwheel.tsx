@@ -3,15 +3,13 @@ import pointer from "../assets/pointer.png";
 import gif from "../assets/gif.gif";
 
 type SpinwheelProps = {
-  onSpin: () => void;
   setWon: (value: boolean) => void;
   won: boolean;
   setPrize: (value: string) => void;
 };
 
-const Spinwheel: FC<SpinwheelProps> = ({ onSpin, setWon, won, setPrize }) => {
+const Spinwheel: FC<SpinwheelProps> = ({ setWon, won, setPrize }) => {
   const wheelRef = useRef<HTMLDivElement>(null);
-  const [isSpinning, setIsSpinning] = useState(false);
   const [showGif, setShowGif] = useState(false);
 
   const partitions = [1, 2, 3, 4, 5, 6];
