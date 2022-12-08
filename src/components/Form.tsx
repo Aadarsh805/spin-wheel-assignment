@@ -42,7 +42,8 @@ const Form: FC<FormProps> = ({ isLoading, setIsLoading, setIsAllowed }) => {
       phoneSchema.parse(phone);
       setTimeout(() => {
         setIsAllowed(true);
-      }, 200);
+        setIsLoading(false);
+      }, 1000);
     } catch (error) {
       setIsLoading(false);
       alert(error);

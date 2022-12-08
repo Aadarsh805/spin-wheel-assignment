@@ -16,7 +16,7 @@ const Spinwheel: FC<SpinwheelProps> = ({ setWon, won, setPrize }) => {
 
   const handleSpin = () => {
     if (won) return;
-    let number = 6;
+    let number = Math.floor(1 + Math.random() * 6);
     let rotate = 0;
 
     if (number === 1) {
