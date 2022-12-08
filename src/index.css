@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+.wheel {
+  transition: transform 2000ms ease;
+}
+
+.partition {
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  transform: translate(-50%);
+  transform-origin: bottom;
+  left: 21%;
+  font-size: 20px;
+  writing-mode: vertical-rl;
+}
+
+.partition-1 {
+  background: linear-gradient(180deg, #e50101 0%, #ff6f6f 100%);
+  left: 50%;
+}
+
+.partition-2 {
+  background: linear-gradient(180deg, #efefd1 0%, #f1f1f1 100%);
+  transform: rotate(60deg);
+}
+.partition-3 {
+  background: linear-gradient(180deg, #e50101 0%, #ff6f6f 100%);
+  transform: rotate(120deg);
+}
+
+.partition-4 {
+  background: linear-gradient(180deg, #efefd1 0%, #f1f1f1 100%);
+  transform: rotate(180deg);
+}
+.partition-5 {
+  background: linear-gradient(180deg, #e50101 0%, #ff6f6f 100%);
+  transform: rotate(240deg);
+}
+
+.partition-6 {
+  background: linear-gradient(180deg, #efefd1 0%, #f1f1f1 100%);
+  transform: rotate(300deg);
+}
